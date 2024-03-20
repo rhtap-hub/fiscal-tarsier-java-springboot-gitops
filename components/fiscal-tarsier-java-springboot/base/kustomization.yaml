@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: fiscal-tarsier-java-springboot
+  janus-idp.io/tekton: fiscal-tarsier-java-springboot
+  backstage.io/kubernetes-id: fiscal-tarsier-java-springboot
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: fiscal-tarsier-java-springboot
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
